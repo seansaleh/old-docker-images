@@ -52,7 +52,7 @@ jobs:
       - name: Export image using ctr
         run: sudo ctr image export /tmp/myimage.tar docker.io/library/php:5.4.45-apache
       - name: Import image to docker
-        run: docker import /tmp/myimage.tar php:5.4.45-apache
+        run: docker import /tmp/myimage.tar force-local-image-php:5.4.45-apache
       - name: Docker Image ls
         run: docker image ls
         
