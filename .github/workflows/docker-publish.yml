@@ -47,9 +47,10 @@ jobs:
       # This image is using a deprecated format, and I was getting an error of:
       # buildx failed with: ERROR: failed to solve: failed to load cache key: Pulling Schema 1 images have been deprecated and disabled by default since containerd v2.0. As a workaround you may set an environment variable `CONTAINERD_ENABLE_DEPRECATED_PULL_SCHEMA_1_IMAGE=1`, but this will be completely removed in containerd v2.1.
       # So as a solution I pully with ctr and load it into docker first!
+      - name: Pull image locally
+        run: sudo ctr image pull --local docker.io/library/php:5.4.45-apache
       - name: Export image using ctr
         run: sudo ctr image export /tmp/myimage.tar docker.io/library/php:5.4.45-apache
-
       - name: Import image to docker
         run: docker import /tmp/myimage.tar php:5.4.45-apache
 
