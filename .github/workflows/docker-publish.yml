@@ -53,7 +53,9 @@ jobs:
         run: sudo ctr image export /tmp/myimage.tar docker.io/library/php:5.4.45-apache
       - name: Import image to docker
         run: docker import /tmp/myimage.tar php:5.4.45-apache
-
+      - name: Docker Image ls
+        run: docker image ls
+        
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
       - name: Log into registry ${{ env.REGISTRY }}
