@@ -1,4 +1,4 @@
-FROM force-local-image-php:5.4.45-apache AS php-base
+FROM php:5.4.45-apache AS php-base
 
 WORKDIR /var/www/html
 
