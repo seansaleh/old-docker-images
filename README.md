@@ -7,14 +7,14 @@ So as a solution I built locally (which didn't have the containerd issue yet) an
 
 My local commands:
 
-(Token generated at https://github.com/settings/tokens/new?scopes=write:packages)
+(Password for login is the token generated at https://github.com/settings/tokens/new?scopes=write:packages)
 
 ```bash
-docker login ghcr.io -u USERNAME
-docker build . --tag ghcr.io/seansaleh/php:5.4.45-apache-with-plugins
-docker push ghcr.io/seansaleh/php:5.4.45-apache-with-plugins
+docker login ghcr.io -u seansaleh
+docker build . --tag ghcr.io/seansaleh/php:5.4.45-apache-with-pluginsV2
+docker push ghcr.io/seansaleh/php:5.4.45-apache-with-pluginsV2
 ```
 
 And then I made the package public at https://github.com/users/seansaleh/packages/container/php/settings
 
-You can use it with `ghcr.io/seansaleh/php:5.4.45-apache-with-plugins`
+You can use it with `ghcr.io/seansaleh/php:5.4.45-apache-with-pluginsV2`
