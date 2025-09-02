@@ -11,10 +11,10 @@ My local commands:
 
 ```bash
 docker login ghcr.io -u seansaleh
-docker build . --tag ghcr.io/seansaleh/php:5.4.45-apache-with-pluginsV2
-docker push ghcr.io/seansaleh/php:5.4.45-apache-with-pluginsV2
+docker build . --tag ghcr.io/seansaleh/php:5.4.45-apache-with-pluginsV3
+docker push ghcr.io/seansaleh/php:5.4.45-apache-with-pluginsV3
 ```
 
 And then I made the package public at https://github.com/users/seansaleh/packages/container/php/settings
 
-You can use it with `ghcr.io/seansaleh/php:5.4.45-apache-with-pluginsV2`
+You can use it with `ghcr.io/seansaleh/php:5.4.45-apache-with-pluginsV3`
